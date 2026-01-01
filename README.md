@@ -168,4 +168,4 @@ See **[Releases](https://github.com/BlackSpirits/UserScripts/releases)** for ful
 
 ## 📜 License
 Released under the [MIT License](./LICENSE).  
-© 2025 BlackSpirits. <p align="right"><a href="#readme">↑ Back to top</a></p>
+© 2025–2026 BlackSpirits. <p align="right"><a href="#readme">↑ Back to top</a></p>
