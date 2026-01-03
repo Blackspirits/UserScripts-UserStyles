@@ -5,15 +5,15 @@
 // @description  Block ads/sponsored and strip IMDbPro UI without touching credit accordions.
 // @author       BlackSpirits
 // @license      MIT
-// @homepageURL  https://github.com/BlackSpirits/UserScripts
-// @supportURL   https://github.com/BlackSpirits/UserScripts/issues
+// @homepageURL  https://github.com/BlackSpirits/UserScripts-UserStyles
+// @supportURL   https://github.com/BlackSpirits/UserScripts-UserStyles/issues
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=imdb.com
 // @match        *://*.imdb.com/*
 // @run-at       document-start
 // @noframes
 // @grant        none
-// @downloadURL https://update.greasyfork.org/scripts/545323/IMDb%20%E2%80%94%20AdPro%20Cleaner.user.js
-// @updateURL https://update.greasyfork.org/scripts/545323/IMDb%20%E2%80%94%20AdPro%20Cleaner.meta.js
+// @downloadURL  https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js
+// @updateURL    https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js
 // ==/UserScript==
 
 (function () {
