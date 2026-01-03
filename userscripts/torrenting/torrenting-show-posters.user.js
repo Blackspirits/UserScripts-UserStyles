@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name         Torrenting — Show torrent posters
 // @namespace    blackspirits.github.io/
-// @version      2.0
+// @version      2.0.0
 // @description  Shows posters in listings (browse/featured/requests and /t*). Inserts poster right after the category icon in the first cell; supports details.php and torrent.php; same-origin fetch; rounded corners; empty-image fallback; no extra permissions.
 // @author       BlackSpirits
 // @license      MIT
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=torrenting.com
-// @homepageURL  https://github.com/BlackSpirits/UserScripts
-// @supportURL   https://github.com/BlackSpirits/UserScripts/issues
-// @downloadURL  https://raw.githubusercontent.com/BlackSpirits/UserScripts/main/torrenting-show-posters.user.js
-// @updateURL    https://raw.githubusercontent.com/BlackSpirits/UserScripts/main/torrenting-show-posters.user.js
+// @homepageURL  https://github.com/BlackSpirits/UserScripts-UserStyles
+// @supportURL   https://github.com/BlackSpirits/UserScripts-UserStyles/issues
+// @downloadURL  https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/torrenting/torrenting-show-posters.user.js
+// @updateURL    https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/torrenting/torrenting-show-posters.user.js
 // @match        *://*.torrenting.com/featured.php*
 // @match        *://*.torrenting.com/browse.php*
 // @match        *://*.torrenting.com/requests.php*
