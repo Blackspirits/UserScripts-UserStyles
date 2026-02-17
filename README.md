@@ -178,8 +178,8 @@ Not affiliated with IMDb or Amazon. Trademarks belong to their owners.</sub>
   <img src="https://github.com/BlackSpirits/BlackSpirits/blob/main/assets/blue-hr.png" alt="" aria-hidden="true" loading="lazy">
 </div>
 
-## 🗒️ Releases
-See **[Releases](https://github.com/BlackSpirits/UserScripts-UserStyles/releases)** for full change logs.
+## 🗒️ Releases & Changelog
+See **[Releases](https://github.com/BlackSpirits/UserScripts-UserStyles/releases)** for full change logs or check the [CHANGELOG.md](./CHANGELOG.md) for detailed version history.
 
 <div align="center">
   <img src="https://github.com/BlackSpirits/BlackSpirits/blob/main/assets/blue-hr.png" alt="" aria-hidden="true" loading="lazy">
@@ -187,7 +187,8 @@ See **[Releases](https://github.com/BlackSpirits/UserScripts-UserStyles/releases
 
 ## 🛠️ Contributing & Feedback
 - Found a bug or have a suggestion? Open an [issue](https://github.com/BlackSpirits/UserScripts-UserStyles/issues).
-- Want to improve a script or add a new one? Send a pull request.
+- Want to improve a script or add a new one? Read our [Contributing Guide](./CONTRIBUTING.md) and send a pull request.
+- **New**: Check out the [Complete Repository Analysis](./ANALYSIS.md) for detailed insights about code quality, security, and architecture.
 
 <div align="center">
   <img src="https://github.com/BlackSpirits/BlackSpirits/blob/main/assets/blue-hr.png" alt="" aria-hidden="true" loading="lazy">
