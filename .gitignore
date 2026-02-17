@@ -1,0 +1,29 @@
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node modules (if linting tools are installed)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+/tmp/
+*.tmp
+.cache/
+
+# Build outputs (if any)
+dist/
+build/
+
+# OS files
+Thumbs.db
+.DS_Store
