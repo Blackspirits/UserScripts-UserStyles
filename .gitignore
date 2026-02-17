@@ -4,7 +4,6 @@
 *.swp
 *.swo
 *~
-.DS_Store
 
 # Node modules (if linting tools are installed)
 node_modules/
