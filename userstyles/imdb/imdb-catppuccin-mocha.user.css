@@ -2001,6 +2001,17 @@ input.btn.primary:hover, .btn.primary:hover{
   border-color: var(--ctp-lavender) !important;
 }
 
+/* Explain row — kill light green background */
+.accept_data,
+.item_explain,
+.accept_data.item_explain,
+.item_outer.accept_data,
+.a-container.plaid #updates_raw .item_container .item_row:not(.header) .item_field,
+.a-container.plaid #updates_raw .item_container .item_row:not(.header) .item_field.col-action {
+  background: var(--ctp-surface0) !important;
+  color: var(--ctp-text) !important;
+}
+
 /* ===========================
    IMDb Contribution (compact)
    =========================== */
