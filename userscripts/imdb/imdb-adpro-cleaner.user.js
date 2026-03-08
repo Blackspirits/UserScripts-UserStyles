@@ -1,19 +1,19 @@
 // ==UserScript==
 // @name         IMDb — Ad/Pro Cleaner
 // @namespace    blackspirits.github.io/
-// @version      1.4.1
+// @version      1.4.2
 // @description  Block ads/sponsored and strip IMDbPro UI without touching credit accordions.
 // @author       BlackSpirits
 // @license      MIT
-// @homepageURL  https://github.com/BlackSpirits/UserScripts-UserStyles
-// @supportURL   https://github.com/BlackSpirits/UserScripts-UserStyles/issues
+// @homepageURL  https://github.com/BlackSpirits/UserScripts
+// @supportURL   https://github.com/BlackSpirits/UserScripts/issues
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=imdb.com
 // @match        *://*.imdb.com/*
 // @run-at       document-start
 // @noframes
 // @grant        none
-// @downloadURL  https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js
-// @updateURL    https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js
+// @downloadURL https://update.greasyfork.org/scripts/545323/IMDb%20%E2%80%94%20AdPro%20Cleaner.user.js
+// @updateURL https://update.greasyfork.org/scripts/545323/IMDb%20%E2%80%94%20AdPro%20Cleaner.meta.js
 // ==/UserScript==
 
 (function () {
@@ -70,6 +70,11 @@
   const stripAdsAndPro = () => {
     // explicit filmography chip/button
     document.querySelectorAll('#name-filmography-pro-chip, a.ipc-chip[href*="pro.imdb.com" i]').forEach(rm);
+      
+      document.querySelectorAll([
+          '.imdbpro-banner',
+          '#nav-right-top-pro',
+      ].join(',')).forEach(n => { if (!inSafeZone(n)) rm(n); });
 
     // ads / sponsored
     document.querySelectorAll([
@@ -137,6 +142,10 @@
       [class*="sponsor" i],
       [aria-label*="Sponsored" i],
       [aria-label*="Patrocinado" i] { display:none !important; }
+      
+      .imdbpro-banner,
+      #nav-right-top-pro,
+      #nav-right-top-pro + .bar,
 
       [class*="imdbpro" i],
       [class*="ProBadge" i],
