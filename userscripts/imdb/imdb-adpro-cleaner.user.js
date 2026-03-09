@@ -5,8 +5,8 @@
 // @description  Block ads/sponsored and strip IMDbPro UI without touching credit accordions.
 // @author       BlackSpirits
 // @license      MIT
-// @homepageURL  https://github.com/BlackSpirits/UserScripts
-// @supportURL   https://github.com/BlackSpirits/UserScripts/issues
+// @homepageURL  https://github.com/BlackSpirits/UserScripts-UserStyles
+// @supportURL   https://github.com/BlackSpirits/UserScripts-UserStyles/issues
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=imdb.com
 // @match        *://*.imdb.com/*
 // @run-at       document-start
@@ -112,8 +112,8 @@
       }
     });
 
-    // plain text "IMDbPro"
-    document.querySelectorAll('a, button, span, div').forEach(el => {
+    // plain text "IMDbPro" — scoped to likely containers only
+    document.querySelectorAll('a[href*="pro.imdb.com" i], .ipc-chip, [class*="ProBadge" i], [class*="imdbpro" i]').forEach(el => {
       const txt = (el.innerText || el.textContent || '').trim();
       if (!txt || !/\bIMDbPro\b/i.test(txt)) return;
       if (inSafeZone(el) || el.closest('li.ipc-metadata-list-summary-item')) {
@@ -123,8 +123,8 @@
       }
     });
 
-    // sponsored text blocks (never touch accordions)
-    document.querySelectorAll('div, section, article, li').forEach(el => {
+    // sponsored text blocks — scoped to ad-likely containers only
+    document.querySelectorAll('[data-testid*="ad" i], [class*="sponsor" i], [aria-label*="Sponsored" i], [aria-label*="Patrocinado" i]').forEach(el => {
       const t = (el.innerText || '').trim();
       if (!t) return;
       if ((/\bSponsored\b/i.test(t) || /\bPatrocinado\b/i.test(t)) && !inSafeZone(el)) {
@@ -176,9 +176,12 @@
   };
   const mo = new MutationObserver(onMut);
   mo.observe(document.documentElement, { childList: true, subtree: true });
+  // SPA navigation — monkey-patch history to fire real events
+  const _pushState = history.pushState.bind(history);
+  const _replaceState = history.replaceState.bind(history);
+  history.pushState = (...args) => { _pushState(...args); stripAdsAndPro(); addHardCSS(); };
+  history.replaceState = (...args) => { _replaceState(...args); stripAdsAndPro(); addHardCSS(); };
   window.addEventListener('popstate', stripAdsAndPro, { passive: true });
-  window.addEventListener('pushstate', stripAdsAndPro, { passive: true });
-  window.addEventListener('replacestate', stripAdsAndPro, { passive: true });
 
   stripAdsAndPro();
 })();

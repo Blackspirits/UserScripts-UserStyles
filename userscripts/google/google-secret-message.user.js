@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Secret Message 💌
-// @namespace    https://github.com/BlackSpirits
+// @namespace    blackspirits.github.io/
 // @version      1.2.0
 // @description  Injects a personalised card above search results and opens a beautiful animated surprise page. 6 types: love, friendship, family, parents, pets, custom. 191 Google domains, 29 languages, auto dark/light mode.
 // @author       BlackSpirits
@@ -235,8 +235,17 @@
 
     // ── Load config from persistent storage (falls back to DEFAULTS) ─────────────
     function loadConfig() {
-        const saved = GM_getValue("lm_config", null);
-        return saved ? Object.assign({}, DEFAULTS, JSON.parse(saved)) : Object.assign({}, DEFAULTS);
+        try {
+            const saved = GM_getValue("lm_config", null);
+            if (!saved) return Object.assign({}, DEFAULTS);
+            const parsed = JSON.parse(saved);
+            if (!parsed || typeof parsed !== "object") throw new Error("invalid config");
+            return Object.assign({}, DEFAULTS, parsed);
+        } catch (e) {
+            console.warn("[Secret Message] Config corrupted, resetting to defaults.", e);
+            GM_setValue("lm_config", null);
+            return Object.assign({}, DEFAULTS);
+        }
     }
 
     const CONFIG = loadConfig();
@@ -2080,7 +2089,7 @@
             if (!confirm(u.confirm_reset)) return;
             GM_setValue("lm_config", null);
             overlay.remove();
-            alert("Settings reset. Reload the page to apply.");
+            location.reload();
         });
     }
 

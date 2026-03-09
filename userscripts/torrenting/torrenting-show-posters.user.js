@@ -40,10 +40,11 @@
       margin-block:2px!important;display:inline-block!important;overflow:hidden!important
     }
     tr.torrentsTableTr td, tr.torrentsTableTR td{vertical-align:middle!important}
+    td.capa-cell{display:inline-flex!important;align-items:center!important;gap:6px!important}
   `;
   document.head.appendChild(style);
 
-  const seen = new Set();
+  const posterCache = new Map(); // id → src string (or EMPTY_IMAGE sentinel)
   const ABS   = (href)=>new URL(href, location.origin).href;
   const getId = (href)=> (href.match(/(?:details|torrent)\.php\?id=(\d+)/i)||[])[1]||null;
 
@@ -88,30 +89,40 @@
   async function insertPoster(detailsHref, tdLabel){
     const id = getId(detailsHref);
     if(!id || !tdLabel || tdLabel.querySelector('img.capa-torrent')) return;
-    const key = `${location.host}${location.pathname}|${id}`;
-    if(seen.has(key)) return; seen.add(key);
+    if(posterCache.has(id)){
+      const cachedSrc = posterCache.get(id);
+      if(cachedSrc === null) return; // already tried, no poster
+      const img = buildImg(cachedSrc);
+      tdLabel.classList.add('capa-cell');
+      insertAfterCategoryIcon(tdLabel, img);
+      return;
+    }
+    posterCache.set(id, null); // mark as in-flight / attempted
 
     const src = await fetchPosterSrc(detailsHref);
     if(!document.body.contains(tdLabel)) return;
+    const finalSrc = src || EMPTY_IMAGE;
+    posterCache.set(id, finalSrc);
 
+    const img = buildImg(finalSrc);
+    tdLabel.classList.add('capa-cell');
+    insertAfterCategoryIcon(tdLabel, img);
+  }
+
+  function buildImg(src){
     const img = document.createElement('img');
     img.className = 'capa-torrent';
     img.alt = '';
     img.loading = 'lazy';
     img.decoding = 'async';
     img.referrerPolicy = 'no-referrer';
-    img.src = src || EMPTY_IMAGE;
+    img.src = src;
     img.onerror = ()=>{ img.src = EMPTY_IMAGE; };
-
-    tdLabel.style.display='inline-flex';
-    tdLabel.style.alignItems='center';
-    tdLabel.style.gap='6px';
-
-    insertAfterCategoryIcon(tdLabel, img);
+    return img;
   }
 
   const findDetailsLink = (root) =>
-    root.querySelector('a[href*="details.php?id="], a[href*="torrent.php?id="], a.b');
+    root.querySelector('a[href*="details.php?id="], a[href*="torrent.php?id="]');
 
   const path = location.pathname;
 
@@ -156,5 +167,9 @@
   }
 
   run();
-  new MutationObserver(()=>run()).observe(document.body,{subtree:true,childList:true});
+  let debounceTimer = 0;
+  new MutationObserver(() => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(run, 300);
+  }).observe(document.body, { subtree: true, childList: true });
 })();
