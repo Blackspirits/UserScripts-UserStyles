@@ -8,6 +8,8 @@
 // @icon         data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxZTFlMmUiLz48cmVjdCB4PSI4IiB5PSIxOCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjY2JhNmY3IiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBkPSJNOCAxOGwyNCAyMCAyNC0yMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjY2JhNmY3IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMjYgMzZsLTMgM2g2bC0zLTN6IiBmaWxsPSIjZTg0MjdhIi8+PC9zdmc+
 // @homepageURL  https://github.com/BlackSpirits/UserScripts-UserStyles
 // @supportURL   https://github.com/BlackSpirits/UserScripts-UserStyles/issues
+// @downloadURL  https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/google/google-secret-message.user.js
+// @updateURL    https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/google/google-secret-message.user.js
 // @match        *://www.google.com/search*
 // @match        *://www.google.ac/search*
 // @match        *://www.google.ad/search*
@@ -235,15 +237,18 @@
 
     // ── Load config from persistent storage (falls back to DEFAULTS) ─────────────
     function loadConfig() {
+        const saved = GM_getValue("lm_config", null);
+        if (!saved) return Object.assign({}, DEFAULTS);
         try {
-            const saved = GM_getValue("lm_config", null);
-            if (!saved) return Object.assign({}, DEFAULTS);
             const parsed = JSON.parse(saved);
-            if (!parsed || typeof parsed !== "object") throw new Error("invalid config");
-            return Object.assign({}, DEFAULTS, parsed);
+            // Sanitise: only keep keys that exist in DEFAULTS
+            const clean = {};
+            for (const key of Object.keys(DEFAULTS)) {
+                if (parsed[key] !== undefined) clean[key] = parsed[key];
+            }
+            return Object.assign({}, DEFAULTS, clean);
         } catch (e) {
-            console.warn("[Secret Message] Config corrupted, resetting to defaults.", e);
-            GM_setValue("lm_config", null);
+            console.warn("[SecretMessage] Saved config is corrupt — resetting to defaults.", e);
             return Object.assign({}, DEFAULTS);
         }
     }
@@ -1354,6 +1359,10 @@
 
         const card  = document.createElement("div");
         card.id     = "lm-card";
+
+        // Static structure — no user data in innerHTML
+        const photoRadius = {circle:"50%",square:"6px",rounded:"16px",portrait:"6px"}[CONFIG.photoStyleCard] || "50%";
+        const photoExtra  = CONFIG.photoStyleCard === "portrait" ? "height:68px;width:46px;" : "";
         card.innerHTML = `
 <style>
   #lm-card{font-family:'Google Sans',Roboto,Arial,sans-serif;margin-bottom:20px;overflow:visible!important;min-width:0}
@@ -1365,9 +1374,9 @@
     cursor:pointer;transition:box-shadow .25s,transform .25s;overflow:hidden;min-width:0;
   }
   #lm-inner:hover{box-shadow:0 6px 28px ${accent}55;transform:translateY(-2px)}
-  #lm-avatar{width:52px;height:52px;border-radius:${{circle:"50%",square:"6px",rounded:"16px",portrait:"6px"}[CONFIG.photoStyleCard]||"50%"};object-fit:cover;border:2.5px solid ${accent};flex-shrink:0;display:block;${CONFIG.photoStyleCard==="portrait"?"height:68px;width:46px;":""}}
+  #lm-avatar{width:52px;height:52px;border-radius:${photoRadius};object-fit:cover;border:2.5px solid ${accent};flex-shrink:0;display:block;${photoExtra}}
   #lm-avatar-fb{
-    width:52px;height:52px;border-radius:${{circle:"50%",square:"6px",rounded:"16px",portrait:"6px"}[CONFIG.photoStyleCard]||"50%"};background:${accent}22;
+    width:52px;height:52px;border-radius:${photoRadius};background:${accent}22;
     border:2.5px solid ${accent};flex-shrink:0;display:flex;
     align-items:center;justify-content:center;font-size:24px;
   }
@@ -1388,16 +1397,37 @@
   #lm-btn:hover{filter:brightness(1.15)}
 </style>
 <div id="lm-inner">
-  ${CONFIG.photoUrl
-    ? `<img id="lm-avatar" src="${CONFIG.photoUrl}" alt="${CONFIG.recipientName}" onerror="this.style.display='none';document.getElementById('lm-avatar-fb').style.display='flex'">`
-    : ""}
-  <div id="lm-avatar-fb" style="display:${CONFIG.photoUrl ? "none" : "flex"}">${icon}</div>
+  <div id="lm-avatar-fb" style="display:flex;font-size:24px"></div>
   <div id="lm-text">
-    <h3>${icon} ${CONFIG.recipientName}</h3>
-    <p>${message}</p>
+    <h3 id="lm-card-title"></h3>
+    <p  id="lm-card-msg"></p>
   </div>
-  <button id="lm-btn">${buttonLabel}</button>
+  <button id="lm-btn"></button>
 </div>`;
+
+        // Inject user data safely via DOM — never via innerHTML
+        const avatarFb = card.querySelector("#lm-avatar-fb");
+        avatarFb.textContent = icon;
+
+        const titleEl = card.querySelector("#lm-card-title");
+        titleEl.textContent = icon + " " + CONFIG.recipientName;
+
+        card.querySelector("#lm-card-msg").textContent  = message;
+        card.querySelector("#lm-btn").textContent        = buttonLabel;
+
+        if (CONFIG.photoUrl) {
+            const safeUrl = /^https?:\/\//i.test(CONFIG.photoUrl) ? CONFIG.photoUrl : "";
+            if (safeUrl) {
+                const img = document.createElement("img");
+                img.id        = "lm-avatar";
+                img.src       = safeUrl;
+                img.alt       = CONFIG.recipientName;
+                img.style.cssText = `width:52px;height:52px;border-radius:${photoRadius};object-fit:cover;border:2.5px solid ${accent};flex-shrink:0;display:block;${photoExtra}`;
+                img.onerror   = () => { img.style.display = "none"; avatarFb.style.display = "flex"; };
+                avatarFb.style.display = "none";
+                card.querySelector("#lm-inner").prepend(img);
+            }
+        }
 
         anchor.parentNode.insertBefore(card, anchor);
         card.querySelector("#lm-inner").addEventListener("click", openSurprise);
