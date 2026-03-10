@@ -40,7 +40,7 @@
 
 <p align="center">
   <b>Modern UserScripts and UserStyles focused on aesthetics, privacy, automation, and UX.
-  Catppuccin-based themes, cleanup scripts, and interface enhancements for IMDb, UserStyles.world, Torrenting.com, and more.
+  Catppuccin-based themes, cleanup scripts, and interface enhancements for IMDb, UserStyles.world, Torrenting.com, and more.</b>
 </p>
 
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
@@ -219,7 +219,7 @@ const CONFIG = {
   | 🌍 | `recipientName` | `message` |
   |----|-----------------|-----------| 
   | 🇬🇧 | Alex | Lucky to have you in my life 🌟 |
-  | 🇵🇹 | Margarida | Sortuda por te ter na minha vida 🌟 |
+  | 🇵🇹 | Margarida | Tenho muita sorte por te ter na minha vida 🌟 |
   | 🇫🇷 | Théo | Chanceux de t'avoir dans ma vie 🌟 |
 
   **💜 Parents**
@@ -299,6 +299,21 @@ Not affiliated with IMDb, Amazon, or Torrenting.com. Trademarks belong to their 
 | Default | Catppuccin (Latte · Frappé · Macchiato · Mocha) |
 |---------|--------------------------------------------------|
 | <img src="./assets/userstyles-default.png" alt="UserStyles.world default theme" width="600" loading="lazy"> | <img src="./assets/userstyles-catppuccin.png" alt="UserStyles.world Catppuccin theme" width="600" loading="lazy"> |
+
+</details>
+
+### Google — Secret Message
+
+<details>
+  <summary>Screenshots</summary>
+
+| Settings panel | Card in Google results |
+|----------------|------------------------|
+| <img src="./assets/google-secret-message/secret-message-settings.png" alt="Secret Message settings panel" width="400" loading="lazy"> | <img src="./assets/google-secret-message/secret-message-card.png" alt="Secret Message card in Google results" width="400" loading="lazy"> |
+
+| Surprise page |
+|---------------|
+| <img src="./assets/google-secret-message/secret-message-surprise.png" alt="Secret Message surprise page" width="400" loading="lazy"> |
 
 </details>
 
