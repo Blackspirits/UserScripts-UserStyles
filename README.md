@@ -252,8 +252,6 @@ const CONFIG = {
 
 ## 🔧 Installation
 
-## 🔧 Installation
-
 ### UserScripts (.user.js)
 1. Install a manager: [Tampermonkey](https://www.tampermonkey.net/) or [Violentmonkey](https://violentmonkey.github.io/).
 2. Click **Install** in the table above and confirm in the manager dialog.
