@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name         IMDb — Catppuccin Mocha Theme
 @namespace    blackspirits.github.io/
-@version      2.8
-@description  Catppuccin Mocha dark theme for IMDb: consistent colors, transparent rating bar with unified hover/radius, header flyouts, autosuggest, awards highlights, subnav spacing, IMDb Scout tweaks, and icon refinements.
+@version      2.9
+@description  Catppuccin Mocha dark theme for IMDb: consistent colors, transparent rating bar with unified hover/radius, header flyouts, autosuggest, awards highlights, subnav spacing, IMDb Scout tweaks, icon refinements, search fixes, AI disclaimer visibility, and contribution button polish.
 @license      MIT
 @author       BlackSpirits
 @icon         https://www.google.com/s2/favicons?sz=64&domain=imdb.com
@@ -1773,8 +1773,8 @@ a[data-testid="more-from-item"]:focus{
 :is([aria-pressed="true"], [aria-checked="true"], .selected, .is-active)
   .ipc-watchlist-ribbon__icon
   svg.ipc-icon--done {
-  color: var(--ctp-red) !important;     /* usa currentColor */
-  background: transparent !important;     /* segurança */
+  color: var(--ctp-red) !important;
+  background: transparent !important;
 }
 
 /* Pinta só o traço do check (o 2º path), não o SVG todo */
@@ -2259,20 +2259,17 @@ img.hoverZoomLink[src*="transparent-pixel"]{
 
 #pagecontent, #pagecontent *{ color: var(--ctp-text) !important; }
 
-/* Lists ("Recently viewed", etc.): tipo do título (TV Series / TV Mini Series) com a mesma cor do resto */
+/* Lists ("Recently viewed", etc.): tipo do título */
 .cli-title-metadata .cli-title-type-data,
 .cli-title-type-data {
   color: var(--ctp-subtext1) !important;
-  -webkit-text-fill-color: var(--ctp-subtext1) !important; /* Safari/WebKit */
+  -webkit-text-fill-color: var(--ctp-subtext1) !important;
   font-weight: 500 !important;
 }
 
 /* ===============================
    IMDb – Secondary metadata text
-   (lists, stats, counters, misc)
    =============================== */
-
-/* Generic small stats like "/41 (2%)" */
 .yhr-size-and-percent,
 .sc-d8f8b55e-2 {
   color: var(--ctp-subtext0) !important;
@@ -2280,7 +2277,6 @@ img.hoverZoomLink[src*="transparent-pixel"]{
   font-weight: 500;
 }
 
-/* "updated X years ago • N titles" */
 .sc-2df17e0-0,
 .sc-2df17e0-0 span,
 .sc-2df17e0-1 {
@@ -2308,13 +2304,11 @@ button.TenUp_tenUpWatchedButton__GYi7E {
   border-radius: 999px !important;
 }
 
-/* tira espaço extra que vem do layout */
 button.TenUp_tenUpWatchedButton__GYi7E {
   margin-left: 0 !important;
   align-self: flex-start !important;
 }
 
-/* se mesmo assim ainda parecer "longo", corta o texto com ellipsis */
 button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   white-space: nowrap !important;
 }
@@ -2357,8 +2351,6 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
    IMDb / IMDbPro Help boxes (AUI)
    Fix white backgrounds -> Catppuccin surfaces
    =========================== */
-
-/* 1) Main boxes / containers */
 .message,
 .message .a-box,
 .message .a-box-inner,
@@ -2379,13 +2371,11 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   border-radius: 10px;
 }
 
-/* 2) “Inner” layer (padding boxes) — slightly different surface */
 .message .aui-padding,
 .message .a-box-inner.aui-padding {
   background: var(--ctp-surface0) !important;
 }
 
-/* 3) Expander headers (clickable bars) */
 .message a.a-expander-header,
 .message .a-expander-section-header {
   background: var(--ctp-surface1) !important;
@@ -2394,7 +2384,6 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   border-radius: 10px;
 }
 
-/* 4) Text and links */
 .message p,
 .message li,
 .message span,
@@ -2411,23 +2400,20 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   color: var(--ctp-sky) !important;
 }
 
-/* 5) AUI icons (alerts + expand/collapse) */
 .message .a-icon,
 .message .a-icon-alert,
 .message .a-icon-section-expand,
 .message .a-icon-section-collapse {
-  filter: brightness(0) invert(1) !important; /* ensure visibility on dark */
+  filter: brightness(0) invert(1) !important;
   opacity: 0.9 !important;
 }
 
-/* 6) Dividers and horizontal rules */
 .message hr {
   border: 0 !important;
   border-top: 1px solid var(--ctp-surface2) !important;
   background: transparent !important;
 }
 
-/* 7) Tables */
 .message table,
 .message tbody,
 .message tr,
@@ -2438,12 +2424,10 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   border-color: var(--ctp-surface2) !important;
 }
 
-/* 8) Images inside boxes (does not affect the image itself, only removes white “halo”) */
 .message img {
   background: transparent !important;
 }
 
-/* 9) Blocks that sometimes come with inline (white) background */
 .message [style*="background"],
 .message [style*="background-color: rgb(255"],
 .message [style*="background-color:#fff"],
@@ -2455,8 +2439,6 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
 /* ===========================
    Contribute / Help (AUI) — kill remaining white blocks
    =========================== */
-
-/* 0) Small safeguard: ensure no “broken” rules */
 .message .a-box-inner,
 .message a.a-expander-header,
 .message .a-expander-section-header,
@@ -2467,7 +2449,6 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   border-radius: 10px !important;
 }
 
-/* 1) Typical white blocks (outside of .message) */
 #updates_raw .blurb,
 #updates_raw .choose_more,
 #updates_raw .message_warn,
@@ -2485,7 +2466,6 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   border-color: var(--ctp-surface2) !important;
 }
 
-/* 2) AUI alerts: sometimes the “white” is on the content itself */
 #updates_raw .a-alert,
 #updates_raw .a-alert-container,
 #updates_raw .a-alert-content,
@@ -2494,14 +2474,12 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   color: var(--ctp-text) !important;
 }
 
-/* 3) Expanders: white background often lives in the inner body */
 #updates_raw .a-expander-content,
 #updates_raw .a-expander-content *{
   background: transparent !important;
   color: var(--ctp-text) !important;
 }
 
-/* 4) But we want soft “cards” inside expanders (paragraphs/tables) */
 #updates_raw .a-expander-content p,
 #updates_raw .a-expander-content table,
 #updates_raw .a-expander-content tbody,
@@ -2513,7 +2491,6 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   border-color: var(--ctp-surface2) !important;
 }
 
-/* 5) Inputs / textarea inside these panels (large light rectangles) */
 #updates_raw :is(textarea, input[type="text"], input[type="search"], select),
 .message :is(textarea, input[type="text"], input[type="search"], select){
   background: var(--ctp-surface0) !important;
@@ -2521,7 +2498,6 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   border: 1px solid var(--ctp-surface2) !important;
 }
 
-/* 6) Inline white backgrounds (more aggressive, but limited to contribute/help) */
 #updates_raw *[style*="background"],
 #updates_raw *[style*="background-color"],
 #updates_raw *[style*="#fff"],
@@ -2530,7 +2506,6 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   background: var(--ctp-surface1) !important;
 }
 
-/* 7) Header “card” of the list (sometimes rendered white) */
 #updates_raw .header,
 #updates_raw .header div{
   background: var(--ctp-surface0) !important;
@@ -2542,6 +2517,68 @@ button.TenUp_tenUpWatchedButton__GYi7E .ipc-btn__text {
   background: var(--ctp-surface0) !important;
   color: var(--ctp-text) !important;
   border-color: var(--ctp-surface2) !important;
+}
+
+/* ===========================
+   Final fix pack — search / AI review / track contribution
+   =========================== */
+#nav-search-form,
+#nav-search-form > *,
+#nav-search-form .imdb-header-search__state,
+#nav-search-form .imdb-header-search__input,
+#nav-search-form .nav-search__search-submit,
+#nav-search-form .searchCatSelector-button,
+#nav-search-form .searchCatSelector-button-mobile{
+  background: var(--ctp-surface0) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+#nav-search-form .imdb-header-search__input,
+#nav-search-form .searchCatSelector-button,
+#nav-search-form .searchCatSelector-button-mobile,
+#nav-search-form .nav-search__search-submit{
+  border-radius: 8px !important;
+}
+
+#nav-search-form .react-autosuggest__suggestions-container--open,
+#nav-search-form .react-autosuggest__suggestions-list,
+#nav-search-form .searchCatSelector-menu{
+  border-radius: 8px !important;
+}
+
+.AIReviewSummary_disclaimer__CCUVJ,
+.AIReviewSummary_disclaimer__CCUVJ *{
+  color: var(--ctp-subtext1) !important;
+  -webkit-text-fill-color: var(--ctp-subtext1) !important;
+  opacity: 1 !important;
+}
+
+.a-container.plaid #updates_raw a.trackbutton,
+.a-container.plaid #updates_raw a.btn.trackbutton,
+.a-container.plaid #updates_raw input.btn.trackbutton,
+.a-container.plaid #updates_raw .trackbutton,
+a.trackbutton,
+a.trackbutton:visited,
+input.trackbutton{
+  display: inline-block !important;
+  background: var(--ctp-surface0) !important;
+  color: var(--ctp-blue) !important;
+  border: 1px solid var(--ctp-surface2) !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.a-container.plaid #updates_raw a.trackbutton:hover,
+.a-container.plaid #updates_raw a.btn.trackbutton:hover,
+.a-container.plaid #updates_raw input.btn.trackbutton:hover,
+.a-container.plaid #updates_raw .trackbutton:hover,
+a.trackbutton:hover,
+input.trackbutton:hover{
+  background: var(--ctp-surface1) !important;
+  color: var(--ctp-lavender) !important;
+  border-color: var(--ctp-lavender) !important;
 }
 
 } /* end @-moz-document */
