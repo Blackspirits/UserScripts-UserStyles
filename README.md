@@ -299,6 +299,20 @@ Independent community project, not affiliated with Netflix, IMDb, Amazon, Torren
 <a id="screenshots"></a>
 ## <sub><img src="./assets/icons/work.svg" alt="" width="22" /></sub> Screenshots
 
+### Netflix — Subtitle Downloader
+
+<details>
+  <summary>Preview</summary>
+  <p><img src="./assets/screenshots/netflix-subtitle-downloader.webp" alt="Netflix Subtitle Downloader — subtitle selection and settings menus" width="800" loading="lazy"></p>
+</details>
+
+### Torrenting — Show torrent posters
+
+<details>
+  <summary>Preview</summary>
+  <p><img src="./assets/screenshots/torrenting-show-posters.webp" alt="Torrenting.org listings with poster thumbnails added by the userscript" width="800" loading="lazy"></p>
+</details>
+
 ### IMDb — Catppuccin Mocha Theme
 
 <details>
