@@ -37,15 +37,15 @@
 <a id="catalog"></a>
 ## <sub><img src="./assets/icons/work.svg" alt="" width="22" /></sub> Explore the collection
 
-Choose a project, then select **UserScript** or **UserStyle** under **Install**. You'll need a compatible browser extension.
+Choose a project, then select **UserScript** or **UserStyle** under **Install**. Published UserScripts open on Greasy Fork; the **Source** link points to the file maintained on GitHub. You'll need a compatible browser extension.
 
 | Project | What it does | Install |
 |:--------|:-------------|:--------|
-| **Netflix — Subtitle Downloader** | SRT/WebVTT/TTML subtitles, language presets and resumable batches. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/netflix/netflix-subtitle-downloader.user.js) |
+| **Netflix — Subtitle Downloader** | SRT/WebVTT/TTML subtitles, language presets and resumable batches. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://greasyfork.org/pt/scripts/605588-netflix-subtitle-downloader) [Source](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/netflix/netflix-subtitle-downloader.user.js) |
 | **IMDb — Catppuccin Mocha Theme** | A Catppuccin Mocha dark theme for IMDb. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/imdb/imdb-catppuccin-mocha.user.css) |
 | **UserStyles.world — Catppuccin Theme** | Catppuccin palettes with refined layouts and contrast. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/userstyles-world/userstyles-world-catppuccin.user.css) |
-| **IMDb — Ad & IMDbPro Cleaner** | Hides ads, sponsored labels and IMDbPro prompts. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js) |
-| **Torrenting.com — Auto Posters** | Adds posters to torrent listings and detail pages. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/torrenting/torrenting-show-posters.user.js) |
+| **IMDb — Ad & IMDbPro Cleaner** | Hides ads, sponsored labels and IMDbPro prompts. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://greasyfork.org/pt/scripts/545323) [Source](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js) |
+| **Torrenting — Show torrent posters** | Adds movie and TV posters to listings on Torrenting.org and Torrenting.com. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://greasyfork.org/pt/scripts/540357-torrenting-show-torrent-posters) [Source](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/torrenting/torrenting-show-posters.user.js) |
 | **Google — Secret Message** | Personalised search cards and animated surprise pages. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/google/google-secret-message.user.js) |
 
 <div align="center"><img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%" /></div>
@@ -139,9 +139,9 @@ Hides ads, sponsored labels and IMDbPro upsells on IMDb without removing any pag
 
 <a id="-torrentingcom--auto-posters"></a>
 <a id="torrenting-posters"></a>
-## <sub><img src="./assets/icons/userscripts.svg" alt="" width="22" /></sub> Torrenting.com — Auto Posters
+## <sub><img src="./assets/icons/userscripts.svg" alt="" width="22" /></sub> Torrenting — Show torrent posters
 
-Displays movie and series posters directly in torrent listings on Torrenting.com.
+Displays movie and series posters in torrent listings on Torrenting.org and Torrenting.com.
 
 **Features**
 - Supports all page types: featured, browse, requests, torrent details
@@ -271,7 +271,7 @@ const CONFIG = {
 
 ### UserScripts (.user.js)
 1. Install a manager: [Tampermonkey](https://www.tampermonkey.net/) or [Violentmonkey](https://violentmonkey.github.io/).
-2. In the **Install** column, select **UserScript** for the project and confirm in your script manager.
+2. In the **Install** column, select **UserScript** for the project and confirm in your script manager. For published scripts, this takes you to Greasy Fork; **Source** provides the repository-hosted file.
 
 ### UserStyles (.user.css)
 1. Install [Stylus](https://add0n.com/stylus.html).
@@ -291,7 +291,7 @@ const CONFIG = {
 | Safari  | 🧪 Not tested | 🧪 Not tested |
 
 <sub>Legend: ✔️ works · ⚠️ partial · 🧪 not tested · ✖️ no support<br>
-Independent community project, not affiliated with Netflix, IMDb, Amazon, Torrenting.com or other referenced services. All trademarks belong to their respective owners.</sub>
+Independent community project, not affiliated with Netflix, IMDb, Amazon, Torrenting.org, Torrenting.com or other referenced services. All trademarks belong to their respective owners.</sub>
 
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
