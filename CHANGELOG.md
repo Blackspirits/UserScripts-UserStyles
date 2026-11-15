@@ -5,6 +5,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## Netflix — Subtitle Downloader
+
+### v1.0.1
+- Initial public release
+- Downloads Netflix subtitles as SRT, original WebVTT/TTML, or both
+- Lists the available text subtitle tracks, including those whose download addresses Netflix only provides on request
+- Default languages ticked automatically on every title
+- Season and whole-series batches in one ZIP, with pause, resume and automatic retry when Netflix stalls
+- SRT keeps italics, bold, underline, colours and top positioning (`{\an8}`); white, the player default, is left out unless set otherwise
+- Warns when Netflix changes something the script depends on, with an exportable diagnostic (no cookies, addresses or subtitle text)
+- Menu in 13 languages
+
+---
+
 ## Google — Secret Message
 
 ### v1.2.0

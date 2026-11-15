@@ -1,8 +1,7 @@
 <a id="top"></a>
 
-<!-- Hero/banner -->
 <p align="center">
-  <a href="https://github.com/BlackSpirits/UserScripts-UserStyles/stargazers" rel="noopener noreferrer">
+  <a href="https://github.com/BlackSpirits/UserScripts-UserStyles" rel="noopener noreferrer">
     <picture>
       <source srcset="./assets/readme-hero.svg" type="image/svg+xml" />
       <img src="./assets/readme-hero.webp" alt="BlackSpirits — UserScripts & UserStyles banner" width="100%">
@@ -10,72 +9,77 @@
   </a>
 </p>
 
-<!-- Status badges -->
-<p align="center">
-  <a href="https://github.com/BlackSpirits/UserScripts-UserStyles/stargazers" rel="noopener noreferrer">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/BlackSpirits/UserScripts-UserStyles?label=Stars&style=flat-square&labelColor=313244&color=cba6f7&logo=github&logoColor=cdd6f4"></a>
-  <a href="https://github.com/BlackSpirits/UserScripts-UserStyles/issues" rel="noopener noreferrer">
-    <img alt="Open issues" src="https://img.shields.io/github/issues/BlackSpirits/UserScripts-UserStyles?label=Issues&style=flat-square&labelColor=313244&color=f9e2af&logo=github&logoColor=cdd6f4"></a>
-  <a href="https://github.com/BlackSpirits/UserScripts-UserStyles/commits/main" rel="noopener noreferrer">
-    <img alt="Last commit" src="https://img.shields.io/github/last-commit/BlackSpirits/UserScripts-UserStyles?label=Last%20commit&style=flat-square&labelColor=313244&color=94e2d5&logo=github&logoColor=cdd6f4"></a>
-  <a href="./LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-a6e3a1?style=flat-square&labelColor=313244&logo=readthedocs&logoColor=cdd6f4"></a>
-  <a href="https://github.com/BlackSpirits" rel="noopener noreferrer">
-    <img alt="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4%EF%B8%8F-f2cdcd?style=flat-square&labelColor=313244&logo=opensourceinitiative&logoColor=cba6f7"></a>
-</p>
+<h3 align="center">Small browser enhancements. Thoughtful by design.</h3>
 
-<!-- Donation badges -->
 <p align="center">
-  <a href="https://donate.stripe.com/00w14peB0gBx1tBeOz3Nm00">
-    <img alt="Stripe" src="https://img.shields.io/badge/Stripe-635bff?style=for-the-badge&logo=stripe&logoColor=white"></a>
-  <a href="https://www.paypal.com/paypalme/filipemota" rel="noopener noreferrer">
-    <img alt="PayPal" src="https://img.shields.io/badge/PayPal-003087?style=for-the-badge&logo=paypal&logoColor=white"></a>
-  <a href="https://ko-fi.com/blackspirits" rel="noopener noreferrer">
-    <img alt="Ko-fi" src="https://img.shields.io/badge/Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white"></a>
-  <a href="https://buymeacoffee.com/blackspirits28" rel="noopener noreferrer">
-    <img alt="Buy Me a Coffee" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black"></a>
-  <a href="mailto:blackspirits@gmail.com">
-    <img alt="Email" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  Practical userscripts and userstyles for cleaner interfaces, accessible workflows,
+  media tools and everyday browsing. Built and maintained by
+  <a href="https://github.com/BlackSpirits"><strong>BlackSpirits</strong></a>.
 </p>
 
 <p align="center">
-  <b>Modern UserScripts and UserStyles focused on aesthetics, privacy, automation, and UX.
-  Catppuccin-based themes, cleanup scripts, and interface enhancements for IMDb, UserStyles.world, Torrenting.com, and more.</b>
+  <a href="https://github.com/BlackSpirits/UserScripts-UserStyles/stargazers" aria-label="See repository stars"><img alt="GitHub stars (live count)" height="26" src="https://img.shields.io/github/stars/BlackSpirits/UserScripts-UserStyles?style=flat&amp;label=Stars&amp;logo=github&amp;logoColor=cba6f7&amp;labelColor=232334&amp;color=45475a" /></a>
+  <a href="https://github.com/BlackSpirits/UserScripts-UserStyles/issues" aria-label="See open GitHub issues"><img alt="Open GitHub issues (live count)" height="26" src="https://img.shields.io/github/issues/BlackSpirits/UserScripts-UserStyles?style=flat&amp;label=Open%20issues&amp;logo=github&amp;logoColor=f9e2af&amp;labelColor=232334&amp;color=45475a" /></a>
+  <a href="./LICENSE"><img alt="MIT License" height="26" src="https://img.shields.io/badge/License-MIT-45475a?style=flat&amp;labelColor=232334" /></a>
 </p>
 
+<div align="center"><img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%" /></div>
+
+<p align="center">
+  <a href="#catalog">Browse projects</a> &nbsp;·&nbsp;
+  <a href="#install">Installation</a> &nbsp;·&nbsp;
+  <a href="#screenshots">Screenshots</a> &nbsp;·&nbsp;
+  <a href="#contributing">Contributing</a> &nbsp;·&nbsp;
+  <a href="#support">Support</a>
+</p>
+
+<a id="-available-scripts--styles"></a>
+<a id="catalog"></a>
+## <sub><img src="./assets/icons/work.svg" alt="" width="22" /></sub> Explore the collection
+
+Choose a script or style below. Installation takes one click after installing a compatible browser extension.
+
+| Project | Type | What it does | Install |
+|:--------|:-----|:-------------|:--------|
+| **Netflix — Subtitle Downloader** | UserScript | Downloads Netflix subtitles as SRT or original WebVTT/TTML: available languages, default languages, season and series batches. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/netflix/netflix-subtitle-downloader.user.js) |
+| **IMDb — Catppuccin Mocha Theme** | UserStyle | Elegant dark theme for IMDb using the Catppuccin Mocha palette. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/imdb/imdb-catppuccin-mocha.user.css) |
+| **UserStyles.world — Catppuccin Theme** | UserStyle | Catppuccin theme for UserStyles.world with full layout and contrast refinements. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/userstyles-world/userstyles-world-catppuccin.user.css) |
+| **IMDb — Ad & IMDbPro Cleaner** | UserScript | Removes IMDb ads, IMDbPro upsell panels, and layout clutter. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js) |
+| **Torrenting.com — Auto Posters** | UserScript | Displays posters in torrent listings with an optimised layout. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/torrenting/torrenting-show-posters.user.js) |
+| **Google — Secret Message** | UserScript | Injects a personalised card in Google results + animated surprise page. 6 types: love, friendship, family, parents, pets, custom. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/google/google-secret-message.user.js) |
+
+<div align="center"><img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%" /></div>
+
+<a id="-netflix--subtitle-downloader"></a>
+<a id="netflix"></a>
+## <sub><img src="./assets/icons/recent.svg" alt="" width="22" /></sub> Netflix — Subtitle Downloader
+
+<img alt="Supported browsers: Chrome, Firefox and Edge" height="26" src="https://img.shields.io/badge/Browsers-Chrome%20%7C%20Firefox%20%7C%20Edge-45475a?style=flat&amp;labelColor=232334">
+
+Downloads the subtitles of the Netflix film or episode you are watching. A small button at the top of the player opens the menu: pick the languages and click **Download**.
+
+**Features**
+- Saves SRT, the original WebVTT/TTML, or both
+- Lists the available text subtitle tracks, including those whose download addresses Netflix only provides on request
+- Default languages ticked automatically on every title
+- Season and whole-series batches in a single ZIP, with pause, resume and automatic retry when Netflix stalls
+- SRT keeps italics, bold, underline, colours and top positioning (`{\an8}`); white, the player default, is left out unless you choose otherwise
+- File names with optional episode title and service tag (`Netflix` or `NF`)
+- Warns when Netflix changes something the script depends on, with an exportable diagnostic (no cookies, addresses or subtitle text)
+- Menu in 13 languages, following the Netflix interface language
+
+**Known limitations**
+- Image-only subtitle tracks and forced tracks without a download address cannot be saved
+- Tracks fetched on request briefly change the subtitle shown in the player; your own choice is restored afterwards
+- Downloading every language for a whole series in "SRT and original" can exceed the 384 MB batch limit; the batch then pauses and offers the ZIP done so far
+
+Found a problem? Use **Export diagnostic** in the settings and attach the file to an [issue](https://github.com/BlackSpirits/UserScripts-UserStyles/issues).
+
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## 📚 Table of Contents
-
-- [Available Scripts & Styles](#-available-scripts--styles)
-- [IMDb — Catppuccin Mocha Theme](#-imdb--catppuccin-mocha-theme)
-- [UserStyles.world — Catppuccin Theme](#-userstylesworld--catppuccin-theme)
-- [IMDb — Ad & IMDbPro Cleaner](#-imdb--ad--imdbpro-cleaner)
-- [Torrenting.com — Auto Posters](#-torrentingcom--auto-posters)
-- [Google — Secret Message](#-google--secret-message)
-- [Installation](#-installation)
-- [Browser support](#-browser-support)
-- [Screenshots](#️-screenshots)
-- [Contributing & Feedback](#️-contributing--feedback)
-- [Support the project](#-support-the-project)
-- [License](#-license)
-
-<img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
-
-## 📂 Available Scripts & Styles
-
-| Name | Type | Description | Install |
-|------|------|-------------|---------|
-| **IMDb — Catppuccin Mocha Theme** | UserStyle | Elegant dark theme for IMDb using the Catppuccin Mocha palette. | [![Install](https://img.shields.io/badge/Install-UserStyle-cba6f7?style=flat-square&labelColor=313244)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/imdb/imdb-catppuccin-mocha.user.css) |
-| **UserStyles.world — Catppuccin Theme** | UserStyle | Catppuccin theme for UserStyles.world with full layout and contrast refinements. | [![Install](https://img.shields.io/badge/Install-UserStyle-cba6f7?style=flat-square&labelColor=313244)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/userstyles-world/userstyles-world-catppuccin.user.css) |
-| **IMDb — Ad & IMDbPro Cleaner** | UserScript | Removes IMDb ads, IMDbPro upsell panels, and layout clutter. | [![Install](https://img.shields.io/badge/Install-UserScript-fab387?style=flat-square&labelColor=313244)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js) |
-| **Torrenting.com — Auto Posters** | UserScript | Displays posters in torrent listings with an optimised layout. | [![Install](https://img.shields.io/badge/Install-UserScript-fab387?style=flat-square&labelColor=313244)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/torrenting/torrenting-show-posters.user.js) |
-| **Google — Secret Message** | UserScript | Injects a personalised card in Google results + animated surprise page. 6 types: love, friendship, family, parents, pets, custom. | [![Install](https://img.shields.io/badge/Install-UserScript-fab387?style=flat-square&labelColor=313244)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/google/google-secret-message.user.js) |
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
-<img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
-
-## ✨ IMDb — Catppuccin Mocha Theme
+<a id="-imdb--catppuccin-mocha-theme"></a>
+<a id="imdb-catppuccin"></a>
+## <sub><img src="./assets/icons/tech.svg" alt="" width="22" /></sub> IMDb — Catppuccin Mocha Theme
 
 Full dark theme for IMDb built on the **Catppuccin Mocha** palette.
 
@@ -105,10 +109,11 @@ Bug reports and feature requests → [GitHub Issues](https://github.com/BlackSpi
   <p><sub>Full detailed changelog: <a href="https://userstyles.world/style/23644/imdb-catppuccin-mocha-theme">UserStyles.world</a></sub></p>
 </details>
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## ✨ UserStyles.world — Catppuccin Theme
+<a id="-userstylesworld--catppuccin-theme"></a>
+<a id="userstyles-world"></a>
+## <sub><img src="./assets/icons/tech.svg" alt="" width="22" /></sub> UserStyles.world — Catppuccin Theme
 
 **Features**
 - Supports all Catppuccin variants: Latte, Frappé, Macchiato, Mocha
@@ -116,10 +121,11 @@ Bug reports and feature requests → [GitHub Issues](https://github.com/BlackSpi
 - Improved contrast and spacing for listings and metadata
 - Consistent hover and focus states throughout
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## 🧹 IMDb — Ad & IMDbPro Cleaner
+<a id="-imdb--ad--imdbpro-cleaner"></a>
+<a id="imdb-cleaner"></a>
+## <sub><img src="./assets/icons/userscripts.svg" alt="" width="22" /></sub> IMDb — Ad & IMDbPro Cleaner
 
 Removes ads, IMDbPro upsell banners, and layout noise from IMDb without breaking existing functionality.
 
@@ -131,10 +137,11 @@ Removes ads, IMDbPro upsell banners, and layout noise from IMDb without breaking
 - Real SPA navigation support via `history.pushState`/`replaceState` patch
 - Throttled `requestAnimationFrame` for minimal performance impact
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## 🎬 Torrenting.com — Auto Posters
+<a id="-torrentingcom--auto-posters"></a>
+<a id="torrenting-posters"></a>
+## <sub><img src="./assets/icons/userscripts.svg" alt="" width="22" /></sub> Torrenting.com — Auto Posters
 
 Displays movie and series posters directly in torrent listings on Torrenting.com.
 
@@ -146,12 +153,13 @@ Displays movie and series posters directly in torrent listings on Torrenting.com
 - Lazy loading and async decoding for performance
 - Same-origin fetch — no external requests
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## 💌 Google — Secret Message
+<a id="-google--secret-message"></a>
+<a id="google-message"></a>
+## <sub><img src="./assets/icons/userscripts.svg" alt="" width="22" /></sub> Google — Secret Message
 
-<img alt="Browser Support" src="https://img.shields.io/badge/Support-Chrome%20%7C%20Firefox%20%7C%20Edge-cba6f7?style=flat-square&labelColor=313244&logo=googlechrome&logoColor=cdd6f4">
+<img alt="Supported browsers: Chrome, Firefox and Edge" height="26" src="https://img.shields.io/badge/Browsers-Chrome%20%7C%20Firefox%20%7C%20Edge-45475a?style=flat&amp;labelColor=232334">
 
 Injects a personalised card above Google search results whenever a trigger keyword is searched, and opens a beautiful full-screen animated surprise page when clicked.  
 All settings are managed through the **Tampermonkey / Violentmonkey menu** — no code editing required.
@@ -247,10 +255,11 @@ const CONFIG = {
   </ul>
 </details>
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## 🔧 Installation
+<a id="-installation"></a>
+<a id="install"></a>
+## <sub><img src="./assets/icons/about.svg" alt="" width="22" /></sub> Installation
 
 ### UserScripts (.user.js)
 1. Install a manager: [Tampermonkey](https://www.tampermonkey.net/) or [Violentmonkey](https://violentmonkey.github.io/).
@@ -260,10 +269,11 @@ const CONFIG = {
 1. Install [Stylus](https://add0n.com/stylus.html).
 2. Click **Install** in the table above and enable the style.
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## 🧭 Browser Support
+<a id="-browser-support"></a>
+<a id="browser-support"></a>
+## <sub><img src="./assets/icons/tech.svg" alt="" width="22" /></sub> Browser support
 
 | Browser | UserScripts | UserStyles |
 |---------|-------------|------------|
@@ -273,12 +283,13 @@ const CONFIG = {
 | Safari  | 🧪 Not tested | 🧪 Not tested |
 
 <sub>Legend: ✔️ works · ⚠️ partial · 🧪 not tested · ✖️ no support<br>
-Not affiliated with IMDb, Amazon, or Torrenting.com. Trademarks belong to their respective owners.</sub>
+Independent community project, not affiliated with Netflix, IMDb, Amazon, Torrenting.com or other referenced services. All trademarks belong to their respective owners.</sub>
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## 🖼️ Screenshots
+<a id="️-screenshots"></a>
+<a id="screenshots"></a>
+## <sub><img src="./assets/icons/work.svg" alt="" width="22" /></sub> Screenshots
 
 ### IMDb — Catppuccin Mocha Theme
 
@@ -317,25 +328,28 @@ Not affiliated with IMDb, Amazon, or Torrenting.com. Trademarks belong to their 
 
 </details>
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## 🗒️ Releases & Changelog
+<a id="-releases--changelog"></a>
+<a id="changelog"></a>
+## <sub><img src="./assets/icons/recent.svg" alt="" width="22" /></sub> Releases & changelog
 
 See **[Releases](https://github.com/BlackSpirits/UserScripts-UserStyles/releases)** for full change logs or browse [CHANGELOG.md](./CHANGELOG.md) for detailed version history.
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## 🛠️ Contributing & Feedback
+<a id="️-contributing--feedback"></a>
+<a id="contributing"></a>
+## <sub><img src="./assets/icons/userscripts.svg" alt="" width="22" /></sub> Contributing & feedback
 
 - Found a bug or have a suggestion? Open an [issue](https://github.com/BlackSpirits/UserScripts-UserStyles/issues).
 - Want to improve a script or add a new one? Read the [Contributing Guide](./CONTRIBUTING.md) and send a pull request.
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## ☕ Support the project
+<a id="-support-the-project"></a>
+<a id="support"></a>
+## <sub><img src="./assets/icons/support.svg" alt="" width="22" /></sub> Support the project
 
 If this saves you time or makes your browsing better, a coffee is always appreciated.
 
@@ -354,7 +368,9 @@ If this saves you time or makes your browsing better, a coffee is always appreci
 
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
-## 📜 License
+<a id="-license"></a>
+<a id="license"></a>
+## <sub><img src="./assets/icons/about.svg" alt="" width="22" /></sub> License
 
 Released under the [MIT License](./LICENSE).  
 © 2025–2026 [BlackSpirits](https://github.com/BlackSpirits).
