@@ -74,6 +74,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## IMDb — Ad & IMDbPro Cleaner
 
+### v1.6.0
+- Rewritten as a CSS-only cleaner: ad slots, sponsored labels and IMDbPro upsells are hidden, never removed from the page
+- Fixes legitimate content disappearing: 1.5.0 could remove large page containers (full filmography, full credits, home page sections, sidebar lists/polls) because its text scan matched "IMDbPro"/"Sponsored" anywhere inside them
+- Selectors are exact (`.slot_wrapper`, `.sponsored_label`, IMDbPro links and `*-proupsell` test IDs) instead of broad `[class*="sponsor"]`/text matching
+- No longer patches `history.pushState`/`replaceState` or overrides `doWithAds`/`ad_utils`; no `MutationObserver` (CSS also applies to content loaded later)
+- A row is hidden as a whole only when every link in it points to IMDbPro; rows that mix IMDbPro with other links keep their regular content
+- Added regression tests (`npm test`, jsdom) covering preserved content, mixed rows and hidden promotions
+
 ### v1.5.0
 - Replaced broad `querySelectorAll('a, button, span, div')` and `querySelectorAll('div, section, article, li')` with a lightweight `TreeWalker`-based scan
 - Monkey-patched `history.pushState` and `history.replaceState` to dispatch a real `locationchange` event — replaced dead `pushstate`/`replacestate` listeners

@@ -17,8 +17,9 @@ Use the [Feature Request](https://github.com/BlackSpirits/UserScripts-UserStyles
 2. Keep changes focused — one fix or feature per PR.
 3. Follow the existing code style (see `.eslintrc.json` and `.stylelintrc.json`).
 4. Test your changes in at least one Chromium-based browser with Tampermonkey or Violentmonkey.
-5. Update the relevant `Changelog` section in `CHANGELOG.md`.
-6. Open a pull request against `main` using the provided template.
+5. If the script has tests under `tests/`, run `npm install && npm test`.
+6. Update the relevant `Changelog` section in `CHANGELOG.md`.
+7. Open a pull request against `main` using the provided template.
 
 ## Code style
 

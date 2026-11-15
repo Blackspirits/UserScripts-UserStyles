@@ -44,7 +44,7 @@ Choose a project, then select **UserScript** or **UserStyle** under **Install**.
 | **Netflix — Subtitle Downloader** | SRT/WebVTT/TTML subtitles, language presets and resumable batches. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/netflix/netflix-subtitle-downloader.user.js) |
 | **IMDb — Catppuccin Mocha Theme** | A Catppuccin Mocha dark theme for IMDb. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/imdb/imdb-catppuccin-mocha.user.css) |
 | **UserStyles.world — Catppuccin Theme** | Catppuccin palettes with refined layouts and contrast. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/userstyles-world/userstyles-world-catppuccin.user.css) |
-| **IMDb — Ad & IMDbPro Cleaner** | Hides ads, IMDbPro prompts and page clutter. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js) |
+| **IMDb — Ad & IMDbPro Cleaner** | Hides ads, sponsored labels and IMDbPro prompts. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js) |
 | **Torrenting.com — Auto Posters** | Adds posters to torrent listings and detail pages. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/torrenting/torrenting-show-posters.user.js) |
 | **Google — Secret Message** | Personalised search cards and animated surprise pages. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/google/google-secret-message.user.js) |
 
@@ -127,15 +127,13 @@ Bug reports and feature requests → [GitHub Issues](https://github.com/BlackSpi
 <a id="imdb-cleaner"></a>
 ## <sub><img src="./assets/icons/userscripts.svg" alt="" width="22" /></sub> IMDb — Ad & IMDbPro Cleaner
 
-Removes ads, IMDbPro upsell banners, and layout noise from IMDb without breaking existing functionality.
+Hides ads, sponsored labels and IMDbPro upsells on IMDb without removing any page content.
 
 **Features**
-- Blocks ads and sponsored content (EN + PT variants)
-- Strips IMDbPro upsell panels and prompts
-- Safe-zone protection for credit accordions
-- `TreeWalker`-based text scan — lighter than broad `querySelectorAll` passes
-- Real SPA navigation support via `history.pushState`/`replaceState` patch
-- Throttled `requestAnimationFrame` for minimal performance impact
+- Hides IMDb ad slots and sponsored labels
+- Hides IMDbPro links, badges and upsell panels
+- CSS only: no page content is removed, no text matching, no changes to IMDb's own scripts
+- Works on content loaded later (client-side navigation, expanded sections) with no extra processing
 
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
