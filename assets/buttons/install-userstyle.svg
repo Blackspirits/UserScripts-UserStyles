@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="204" height="38" viewBox="0 0 204 38" role="img" aria-label="Install UserStyle">
-  <rect x=".75" y=".75" width="202.5" height="36.5" rx="9" fill="#232334" stroke="#45475a" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="158" height="38" viewBox="0 0 158 38" role="img" aria-label="Install UserStyle">
+  <rect x=".75" y=".75" width="156.5" height="36.5" rx="9" fill="#232334" stroke="#45475a" stroke-width="1.5"/>
   <path d="M9 1.5A7.5 7.5 0 0 0 1.5 9v20A7.5 7.5 0 0 0 9 36.5" fill="none" stroke="#cba6f7" stroke-width="3" stroke-linecap="round"/>
   <g transform="translate(13 10)" fill="none" stroke="#cba6f7" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 1v14m-5-5 5 5 5-5M2 18h14"/></g>
-  <text x="43" y="24" font-family="Segoe UI, Arial, sans-serif" font-size="13.8" font-weight="650" fill="#cdd6f4">Install UserStyle</text>
-  <g transform="translate(177 13)" fill="none" stroke="#cba6f7" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m2 1 6 6-6 6"/></g>
+  <text x="43" y="24" font-family="Segoe UI, Arial, sans-serif" font-size="13.8" font-weight="650" fill="#cdd6f4">UserStyle</text>
+  <g transform="translate(131 13)" fill="none" stroke="#cba6f7" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m2 1 6 6-6 6"/></g>
 </svg>
