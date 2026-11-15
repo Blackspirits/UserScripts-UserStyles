@@ -37,16 +37,16 @@
 <a id="catalog"></a>
 ## <sub><img src="./assets/icons/work.svg" alt="" width="22" /></sub> Explore the collection
 
-Choose a script or style below. Installation takes one click after installing a compatible browser extension.
+Choose a project, then select **UserScript** or **UserStyle** under **Install**. You'll need a compatible browser extension.
 
-| Project | Type | What it does | Install |
-|:--------|:-----|:-------------|:--------|
-| **Netflix — Subtitle Downloader** | UserScript | Downloads Netflix subtitles as SRT or original WebVTT/TTML: available languages, default languages, season and series batches. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/netflix/netflix-subtitle-downloader.user.js) |
-| **IMDb — Catppuccin Mocha Theme** | UserStyle | Elegant dark theme for IMDb using the Catppuccin Mocha palette. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/imdb/imdb-catppuccin-mocha.user.css) |
-| **UserStyles.world — Catppuccin Theme** | UserStyle | Catppuccin theme for UserStyles.world with full layout and contrast refinements. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/userstyles-world/userstyles-world-catppuccin.user.css) |
-| **IMDb — Ad & IMDbPro Cleaner** | UserScript | Removes IMDb ads, IMDbPro upsell panels, and layout clutter. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js) |
-| **Torrenting.com — Auto Posters** | UserScript | Displays posters in torrent listings with an optimised layout. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/torrenting/torrenting-show-posters.user.js) |
-| **Google — Secret Message** | UserScript | Injects a personalised card in Google results + animated surprise page. 6 types: love, friendship, family, parents, pets, custom. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/google/google-secret-message.user.js) |
+| Project | What it does | Install |
+|:--------|:-------------|:--------|
+| **Netflix — Subtitle Downloader** | SRT/WebVTT/TTML subtitles, language presets and resumable batches. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/netflix/netflix-subtitle-downloader.user.js) |
+| **IMDb — Catppuccin Mocha Theme** | A Catppuccin Mocha dark theme for IMDb. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/imdb/imdb-catppuccin-mocha.user.css) |
+| **UserStyles.world — Catppuccin Theme** | Catppuccin palettes with refined layouts and contrast. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/userstyles-world/userstyles-world-catppuccin.user.css) |
+| **IMDb — Ad & IMDbPro Cleaner** | Hides ads, IMDbPro prompts and page clutter. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js) |
+| **Torrenting.com — Auto Posters** | Adds posters to torrent listings and detail pages. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/torrenting/torrenting-show-posters.user.js) |
+| **Google — Secret Message** | Personalised search cards and animated surprise pages. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/google/google-secret-message.user.js) |
 
 <div align="center"><img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%" /></div>
 
@@ -164,6 +164,9 @@ Displays movie and series posters directly in torrent listings on Torrenting.com
 Injects a personalised card above Google search results whenever a trigger keyword is searched, and opens a beautiful full-screen animated surprise page when clicked.  
 All settings are managed through the **Tampermonkey / Violentmonkey menu** — no code editing required.
 
+<details>
+  <summary><b>Built-in message types</b></summary>
+
 **6 built-in types** — one `type` field changes everything: colour, icon, particles, animated shape, and keywords.
 
 | Type | Colour | Icon | Shape outline | Ideal for |
@@ -174,6 +177,8 @@ All settings are managed through the **Tampermonkey / Violentmonkey menu** — n
 | `"parents"` | 💜 Purple | 💜 | Flower | Mum, dad, grandparent |
 | `"pets"` | 🧡 Orange | 🐾 | Paw | Dog, cat, any pet |
 | `"custom"` | ✏️ Your choice | ✏️ | Infinity | Full manual control |
+
+</details>
 
 **Features**
 - Compact card injected above results — icon/photo, message, and surprise button
@@ -186,6 +191,9 @@ All settings are managed through the **Tampermonkey / Violentmonkey menu** — n
 - Works on all **191 Google country domains**
 - No external JavaScript dependencies
 - Resilient injection via multiple CSS selectors + `MutationObserver` for Google's SPA navigation
+
+<details>
+  <summary><b>Advanced configuration example</b></summary>
 
 **Quick-start CONFIG** — only 3 fields are required; everything else is optional:
 
@@ -209,6 +217,8 @@ const CONFIG = {
     alwaysShow:        false,       // true = show on every Google search
 };
 ```
+
+</details>
 
 <details>
   <summary><b>Type examples across languages</b></summary>
@@ -263,11 +273,11 @@ const CONFIG = {
 
 ### UserScripts (.user.js)
 1. Install a manager: [Tampermonkey](https://www.tampermonkey.net/) or [Violentmonkey](https://violentmonkey.github.io/).
-2. Click **Install** in the table above and confirm in the manager dialog.
+2. In the **Install** column, select **UserScript** for the project and confirm in your script manager.
 
 ### UserStyles (.user.css)
 1. Install [Stylus](https://add0n.com/stylus.html).
-2. Click **Install** in the table above and enable the style.
+2. In the **Install** column, select **UserStyle** for the project and enable it in Stylus.
 
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
 
@@ -354,16 +364,11 @@ See **[Releases](https://github.com/BlackSpirits/UserScripts-UserStyles/releases
 If this saves you time or makes your browsing better, a coffee is always appreciated.
 
 <p align="center">
-  <a href="https://donate.stripe.com/00w14peB0gBx1tBeOz3Nm00">
-    <img alt="Stripe" src="https://img.shields.io/badge/Stripe-635bff?style=for-the-badge&logo=stripe&logoColor=white"></a>
-  <a href="https://www.paypal.com/paypalme/filipemota" rel="noopener noreferrer">
-    <img alt="PayPal" src="https://img.shields.io/badge/PayPal-003087?style=for-the-badge&logo=paypal&logoColor=white"></a>
-  <a href="https://ko-fi.com/blackspirits" rel="noopener noreferrer">
-    <img alt="Ko-fi" src="https://img.shields.io/badge/Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white"></a>
-  <a href="https://buymeacoffee.com/blackspirits28" rel="noopener noreferrer">
-    <img alt="Buy Me a Coffee" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black"></a>
-  <a href="mailto:blackspirits@gmail.com">
-    <img alt="Email" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  <a href="https://donate.stripe.com/00w14peB0gBx1tBeOz3Nm00" rel="noopener noreferrer"><img src="./assets/buttons/stripe.svg" alt="Stripe" height="38" /></a>
+  <a href="https://www.paypal.com/paypalme/filipemota" rel="noopener noreferrer"><img src="./assets/buttons/paypal.svg" alt="PayPal" height="38" /></a>
+  <a href="https://ko-fi.com/blackspirits" rel="noopener noreferrer"><img src="./assets/buttons/kofi.svg" alt="Ko-fi" height="38" /></a>
+  <a href="https://buymeacoffee.com/blackspirits28" rel="noopener noreferrer"><img src="./assets/buttons/buy-me-a-coffee.svg" alt="Buy Me a Coffee" height="38" /></a>
+  <a href="mailto:blackspirits@gmail.com" rel="noopener noreferrer"><img src="./assets/buttons/email.svg" alt="Email" height="38" /></a>
 </p>
 
 <img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%">
