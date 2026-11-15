@@ -1,0 +1,11 @@
+{
+    "name": "userscripts-userstyles",
+    "private": true,
+    "description": "Development-only tooling; the userscripts themselves have no runtime dependencies.",
+    "scripts": {
+        "test": "node tests/imdb/adpro-cleaner.test.js"
+    },
+    "devDependencies": {
+        "jsdom": "^24.1.3"
+    }
+}

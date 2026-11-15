@@ -53,11 +53,14 @@
         '#name-filmography-pro-chip',
     ];
 
-    // Rows that only exist to hold an IMDbPro link (e.g. "More at IMDbPro" + contact/agent links).
+    // Rows that only exist to hold IMDbPro links (e.g. "More at IMDbPro" + contact/agent links).
+    // A row is hidden only if it has no other link, so a row mixing IMDbPro with regular content
+    // keeps that content (only the IMDbPro links themselves are hidden by the rule above).
     // Kept in a separate rule: a browser without :has() drops only this rule, not the one above.
+    const ONLY_PRO_LINKS = ':not(:has(a:not([href*="pro.imdb.com" i])))';
     const HIDE_HAS = [
-        'li.ipc-metadata-list__item:has(> a.ipc-metadata-list-item__label[href*="pro.imdb.com" i])',
-        'li.ipc-inline-list__item:has(> a[href*="pro.imdb.com" i])',
+        `li.ipc-metadata-list__item:has(> a.ipc-metadata-list-item__label[href*="pro.imdb.com" i])${ONLY_PRO_LINKS}`,
+        `li.ipc-inline-list__item:has(> a[href*="pro.imdb.com" i])${ONLY_PRO_LINKS}`,
     ];
 
     const rule = list => `${list.join(',\n')} { display: none !important; }`;
