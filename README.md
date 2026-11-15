@@ -37,16 +37,16 @@
 <a id="catalog"></a>
 ## <sub><img src="./assets/icons/work.svg" alt="" width="22" /></sub> Explore the collection
 
-Choose a project, then select **UserScript** or **UserStyle** under **Install**. Published UserScripts open on Greasy Fork; the **Source** link points to the file maintained on GitHub. You'll need a compatible browser extension.
+Select **UserScript** or **UserStyle** under **Install**. Click a project name to view its source on GitHub. Published UserScripts open on Greasy Fork; you'll need a compatible browser extension.
 
 | Project | What it does | Install |
 |:--------|:-------------|:--------|
-| **Netflix — Subtitle Downloader** | SRT/WebVTT/TTML subtitles, language presets and resumable batches. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://greasyfork.org/pt/scripts/605588-netflix-subtitle-downloader) [Source](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/netflix/netflix-subtitle-downloader.user.js) |
-| **IMDb — Catppuccin Mocha Theme** | A Catppuccin Mocha dark theme for IMDb. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/imdb/imdb-catppuccin-mocha.user.css) |
-| **UserStyles.world — Catppuccin Theme** | Catppuccin palettes with refined layouts and contrast. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/userstyles-world/userstyles-world-catppuccin.user.css) |
-| **IMDb — Ad & IMDbPro Cleaner** | Hides ads, sponsored labels and IMDbPro prompts. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://greasyfork.org/pt/scripts/545323) [Source](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/imdb/imdb-adpro-cleaner.user.js) |
-| **Torrenting — Show torrent posters** | Adds movie and TV posters to listings on Torrenting.org and Torrenting.com. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://greasyfork.org/pt/scripts/540357-torrenting-show-torrent-posters) [Source](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/torrenting/torrenting-show-posters.user.js) |
-| **Google — Secret Message** | Personalised search cards and animated surprise pages. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/google/google-secret-message.user.js) |
+| **[Netflix — Subtitle Downloader](https://github.com/BlackSpirits/UserScripts-UserStyles/blob/main/userscripts/netflix/netflix-subtitle-downloader.user.js)** | SRT/WebVTT/TTML subtitles, language presets and resumable batches. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://greasyfork.org/pt/scripts/605588-netflix-subtitle-downloader) |
+| **[IMDb — Catppuccin Mocha Theme](https://github.com/BlackSpirits/UserScripts-UserStyles/blob/main/userstyles/imdb/imdb-catppuccin-mocha.user.css)** | A Catppuccin Mocha dark theme for IMDb. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/imdb/imdb-catppuccin-mocha.user.css) |
+| **[UserStyles.world — Catppuccin Theme](https://github.com/BlackSpirits/UserScripts-UserStyles/blob/main/userstyles/userstyles-world/userstyles-world-catppuccin.user.css)** | Catppuccin palettes with refined layouts and contrast. | [![Install UserStyle](./assets/buttons/install-userstyle.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userstyles/userstyles-world/userstyles-world-catppuccin.user.css) |
+| **[IMDb — Ad & IMDbPro Cleaner](https://github.com/BlackSpirits/UserScripts-UserStyles/blob/main/userscripts/imdb/imdb-adpro-cleaner.user.js)** | Hides ads, sponsored labels and IMDbPro prompts. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://greasyfork.org/pt/scripts/545323) |
+| **[Torrenting — Show torrent posters](https://github.com/BlackSpirits/UserScripts-UserStyles/blob/main/userscripts/torrenting/torrenting-show-posters.user.js)** | Adds movie and TV posters to listings on Torrenting.org and Torrenting.com. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://greasyfork.org/pt/scripts/540357-torrenting-show-torrent-posters) |
+| **[Google — Secret Message](https://github.com/BlackSpirits/UserScripts-UserStyles/blob/main/userscripts/google/google-secret-message.user.js)** | Personalised search cards and animated surprise pages. | [![Install UserScript](./assets/buttons/install-userscript.svg)](https://raw.githubusercontent.com/BlackSpirits/UserScripts-UserStyles/main/userscripts/google/google-secret-message.user.js) |
 
 <div align="center"><img src="./assets/divider.svg" alt="" aria-hidden="true" width="100%" /></div>
 
@@ -301,17 +301,11 @@ Independent community project, not affiliated with Netflix, IMDb, Amazon, Torren
 
 ### Netflix — Subtitle Downloader
 
-<details>
-  <summary>Preview</summary>
-  <p><img src="./assets/screenshots/netflix-subtitle-downloader.webp" alt="Netflix Subtitle Downloader — subtitle selection and settings menus" width="800" loading="lazy"></p>
-</details>
+<p><img src="./assets/screenshots/netflix-subtitle-downloader.webp" alt="Netflix Subtitle Downloader — subtitle selection and settings menus" width="800" loading="lazy"></p>
 
 ### Torrenting — Show torrent posters
 
-<details>
-  <summary>Preview</summary>
-  <p><img src="./assets/screenshots/torrenting-show-posters.webp" alt="Torrenting.org listings with poster thumbnails added by the userscript" width="800" loading="lazy"></p>
-</details>
+<p><img src="./assets/screenshots/torrenting-show-posters.webp" alt="Torrenting.org listings with poster thumbnails added by the userscript" width="800" loading="lazy"></p>
 
 ### IMDb — Catppuccin Mocha Theme
 
